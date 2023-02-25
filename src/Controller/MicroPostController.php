@@ -36,9 +36,8 @@ class MicroPostController extends AbstractController
 
         // dd($posts->findBy(['title' => 'Welcome to US!']));
 
-        dd($posts->findAll());
         return $this->render('micro_post/index.html.twig', [
-            'controller_name' => 'MicroPostController',
+            'posts' => $posts->findAll(),
         ]);
     }
 
@@ -46,6 +45,8 @@ class MicroPostController extends AbstractController
     #[Route('/micro-post/{post}', name: 'app_micro_post_show')]
     public function showOne(MicroPost $post): Response
     {
-        dd($post);
+        return $this->render('micro_post/show.html.twig', [
+            'post' => $post,
+        ]);
     }
 }
