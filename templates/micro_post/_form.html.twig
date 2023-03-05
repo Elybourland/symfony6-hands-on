@@ -10,7 +10,7 @@
     {{ form_label(form.text, 'Please enter the post text') }}
   </div>
   <div>
-    {{ form_widget(form.text) }}
+    {{ form_widget(form.text, {'attr': {'style': 'color: gray'}}) }}
   </div>
   <div>
     <button type="submit">Save</button>
