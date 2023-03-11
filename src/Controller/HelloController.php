@@ -20,13 +20,13 @@ class HelloController extends AbstractController
   #[Route('/', name: 'app_index')]
   public function index(UserProfileRepository $profiles): Response
   {
-    $user = new User();
-    $user->setEmail('email@email.com');
-    $user->setPassword('12345678');
+    // $user = new User();
+    // $user->setEmail('email@email.com');
+    // $user->setPassword('12345678');
 
-    $profile = new UserProfile();
-    $profile->setUser($user);
-    $profiles->save($profile, true);
+    // $profile = new UserProfile();
+    // $profile->setUser($user);
+    // $profiles->save($profile, true);
 
     // $profile = $profiles->find(1);
     // $profiles->remove($profile, true);
